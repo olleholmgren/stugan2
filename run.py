@@ -1,16 +1,13 @@
-
 from rooms import rooms
 
 
-data_str = str(input('Please enter your name:\n'))
 
 
-if data_str == 'hi':
-    print('Hi there')
+print('\n--------------------------------\n--------------------------------\n\nWelcome to this peaceful and mysterious space in time\n\n--------------------------------\n--------------------------------\n')
 
-print(f'You said: {data_str}')
+player_name = str(input('Please enter your name:\n'))
 
+while player_name == type(str):
+    print(f'Nihaody {player_name}, how are you feeling today?')
+else: print('Please enter name')
 
-
-print('Welcome to this game')
-print(rooms)
