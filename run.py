@@ -1,11 +1,16 @@
 
+from rooms import rooms
 
-print('Welcome to this game')
 
+data_str = str(input('Please enter your name:\n'))
 
-data_str = str(input('Enter your data here:\n'))
 
 if data_str == 'hi':
     print('Hi there')
 
-print(f'You wrote: {data_str}')
+print(f'You said: {data_str}')
+
+
+
+print('Welcome to this game')
+print(rooms)
