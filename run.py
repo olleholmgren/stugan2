@@ -1,6 +1,8 @@
-from rooms import rooms
+from rooms import room_dictionary
 
 
+def get_room(room_number):
+    print(room_number[number])
 
 
 print('\n--------------------------------\n--------------------------------\n\nWelcome to this peaceful,\nmysterious space in time\n\n--------------------------------\n--------------------------------\n')
@@ -14,5 +16,6 @@ while player_name == type(str):
         ('Please enter name')
 
 
+get_room(1)
 
 
