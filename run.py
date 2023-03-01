@@ -10,7 +10,8 @@ player_name = str(input('Please enter your name:\n'))
 while player_name == type(str):
     try:
         print(f'Nihaody {player_name}, how are you feeling today?')
-    except: print('Please enter name')
+    except: 
+        ('Please enter name')
 
 
 
