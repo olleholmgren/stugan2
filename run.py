@@ -1,14 +1,6 @@
 from rooms import rooms_list
 
-
-
-
 print('\n--------------------------------\n--------------------------------\n\nWelcome to this peaceful,\nmysterious space in time\n\n--------------------------------\n--------------------------------\n')
-
-
-
-
-
 
 player_name = str(input('Please enter your name:\n'))
 print(f'Nihaody {player_name}!')
@@ -21,4 +13,24 @@ if game_question == 'yes':
     print('ok, lets go!')
 else: print('oh I see')
 
+print('Let me tell you how to play the game\n----------\n----------')
+print('You navigate by giving me a command of direction.\nn for north, s for south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
+
+def validate_answer():
+
+def game():
+    directions = ['n', 's', 'e', 'w']
+    answer = ['yes', 'no']
+
+    print('POFF! You wake up. Smoke is around you but disappearing. You find yourself lying inside a green tent. What do you want to do?')
+    game_question = str(input('Do you want to step outside the tent? "yes" or "no"?\n'))
+    while begin_game not in answer:
+        begin_game
+    if begin_game == 'y':
+        print(rooms_list[1]['environment'])
+
+
+
+
+game()
 #print(rooms_list[1]['environment'])
