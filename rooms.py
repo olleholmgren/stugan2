@@ -1,6 +1,5 @@
 
-number = 0
-room_num = 0
+rooms_list = ''
 
 """
 
@@ -8,10 +7,12 @@ Controls for the game is n for north, s for south, e for east and finally - w fo
 Numbers in dictionary is corrensponding to the room which you are navigating to.
 
 """
+#This gets the zip-lock Environment
+#print(rooms_list[1]['environment'])
 
-room_dictionary = [
+rooms_list = [
     {
-        'number': 1,
+        'number': 0,
         'name': 'The Tent',
         'environment': 'green tent sheets(walls), a red sleeping bag, a hat with a feather',
         'north': 2,
@@ -20,7 +21,7 @@ room_dictionary = [
         'west': 5,
     },
     {
-        'number': 2,
+        'number': 1,
         'name': 'The Tent Entrance',
         'environment': 'zip-lock',
         'north': 3,
@@ -30,7 +31,7 @@ room_dictionary = [
 
     },
     {
-        'number': 3,
+        'number': 2,
         'name': 'The river',
         'environment': 'Water rushing at splashing in front of you',
         'north': 3,
