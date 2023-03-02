@@ -13,10 +13,16 @@ if game_question == 'yes':
     print('ok, lets go!')
 else: print('oh I see')
 
-print('Let me tell you how to play the game\n----------\n----------')
+print('Firstly, let me tell you how to play the game\n----------\n----------')
 print('You navigate by giving me a command of direction.\nn for north, s for south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
 
-def validate_answer():
+game_question = ''
+
+
+def validate_answer(game_question):
+    while True:
+        print(game_question)
+
 
 def game():
     directions = ['n', 's', 'e', 'w']
@@ -24,7 +30,7 @@ def game():
 
     print('POFF! You wake up. Smoke is around you but disappearing. You find yourself lying inside a green tent. What do you want to do?')
     game_question = str(input('Do you want to step outside the tent? "yes" or "no"?\n'))
-    while begin_game not in answer:
+    while game_question not in answer:
         begin_game
     if begin_game == 'y':
         print(rooms_list[1]['environment'])
