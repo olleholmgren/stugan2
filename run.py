@@ -32,9 +32,9 @@ def game():
     game_question = str(input('Do you want to step outside the tent? "yes" or "no"?\n'))
     while game_question not in answer:
         begin_game
-    if begin_game == 'yes':
-        print(rooms_list[1]['environment'])
-    else return game_question
+        if begin_game == 'yes':
+                print(rooms_list[1]['environment'])
+        else break
 
 
 
