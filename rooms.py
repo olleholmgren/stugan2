@@ -94,7 +94,7 @@ rooms_list = [
     {
         'number': 9,
         'name': 'The fence',
-        'environment': 'My goodness. You thought that you would never come out of that forest, but here you are. Impossible to go more south since there is a mystical red fence blocking the way.,
+        'environment': 'My goodness. You thought that you would never come out of that forest, but here you are. Impossible to go more south since there is a mystical red fence blocking the way',
         'n': 8,
         's': null,
         'e': null,
@@ -130,7 +130,7 @@ rooms_list = [
     {
         'number': 13,
         'name': 'The river',
-        'environment': 'You walk on the bridge, scared but stubborn. You are now at the east side of the river,
+        'environment': 'You walk on the bridge, scared but stubborn. You are now at the east side of the river',
         'n': 14,
         's': 12,
         'e': 2,

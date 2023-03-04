@@ -30,11 +30,10 @@ def game():
 
     print('POFF! You wake up. Smoke is around you but disappearing. You find yourself lying inside a green tent. What do you want to do?')
     game_question = str(input('Do you want to step outside the tent? "yes" or "no"?\n'))
-    while game_question not in answer:
-        begin_game
-        if begin_game == 'yes':
-                print(rooms_list[1]['environment'])
-        else break
+    while game_question != answer:
+        return game_question
+    if game_question == 'yes':
+            return(rooms_list[1]['environment'])
 
 
 
