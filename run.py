@@ -1,6 +1,6 @@
 from rooms import rooms_list
 
-print('\n--------------------------------\n--------------------------------\n\nWelcome to this peaceful,\nmysterious space in time\n\n--------------------------------\n--------------------------------\n')
+print('\n--------------------------------\n--------------------------------\n\nWelcome to this peaceful,\nmysterious space in time/time in space\n\n--------------------------------\n--------------------------------\n')
 
 player_name = str(input('Please enter your name:\n'))
 print(f'Nihaody {player_name}!')
@@ -39,4 +39,4 @@ def game():
 
 
 game()
-#print(rooms_list[1]['environment'])
+print(rooms_list[1]['environment'])
