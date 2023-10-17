@@ -8,8 +8,8 @@ Controls for the game is n for north, s for south, e for east and finally - w fo
 Numbers in dictionary is corrensponding to the room which you are navigating to.
 
 """
-#This gets the zip-lock Environment
-#print(rooms_list[1]['environment'])
+# This gets the zip-lock Environment
+# print(rooms_list[1]['environment'])
 
 rooms_list = [
     {
