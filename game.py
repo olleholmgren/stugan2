@@ -5,23 +5,31 @@ game_question = ''
 begin_game = ''
 
 def print_lines():
-    print('----------------------------------------------')
-    print('----------------------------------------------')
+    print('--------------------------------------------------')
+    print('--------------------------------------------------')
+
+def intro():
+    print_lines()
+    print('Welcome to this peaceful, mysterious space in time')
+    print_lines()
+
+def get_player_name():
+    player_name = str(input('Please enter your name'))
 
 
-condition = str(input(f'How are you feeling today {player_name}?\n'))
+#condition = str(input(f'How are you feeling today {player_name}?\n'))
 
-condition_follow_up1 = str(input(f'I see, why do you think you are feeling {condition}?\n'))
-condition_follow_up2 = str(input('Alright. . . Well, do you want to talk to me about it?\n'))
-print('Ok. I totally understand.')
-game_question = str(input(f'Do you want to play an adventure game with me {player_name}?\n'))
-if game_question == 'yes':
-    print('ok, lets go!')
-else: print('oh I see')
+#condition_follow_up1 = str(input(f'I see, why do you think you are feeling {condition}?\n'))
+#condition_follow_up2 = str(input('Alright. . . Well, do you want to talk to me about it?\n'))
+#print('Ok. I totally understand.')
+#game_question = str(input(f'Do you want to play an adventure game with me {player_name}?\n'))
+#if game_question == 'yes':
+#    print('ok, lets go!')
+#else: print('oh I see')
 
-print('Firstly, let me tell you how to play the game\n----------\n----------')
-print('You navigate by giving me a command of direction.\nn for north, s for 
-        south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
+#print('Firstly, let me tell you how to play the game\n----------\n----------')
+#print('You navigate by giving me a command of direction.\nn for north, s for' 
+#        'south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
 
 
 def validate_answer(game_question):
@@ -30,6 +38,8 @@ def validate_answer(game_question):
 
 
 def game():
+    intro()
+    get_player_name()
     directions = ['n', 's', 'e', 'w']
     answer = ['yes', 'no']
 
