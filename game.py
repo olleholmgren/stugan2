@@ -29,15 +29,17 @@ def beginning():
     game_question = str(input(f'Do you want to play an adventure game with me {player_name}?\n'))
     if game_question == 'yes':
         print('ok, lets go!')
-    else: print('oh I see')
+    else: 
+        print('oh I see')
+    print_lines()
+    print('Firstly, let me tell you how to play the game')
+    print_lines()
+    print('You navigate by giving me a command of direction.\nn for north, s for' 
+          'south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
 
-#print('Firstly, let me tell you how to play the game\n----------\n----------')
-#print('You navigate by giving me a command of direction.\nn for north, s for' 
-#        'south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
-
-#def validate_answer(game_question):
-#    while True:
-#        print(game_question)
+def validate_answer(game_question):
+    while True:
+        print(game_question)
 
 def game():
     intro()

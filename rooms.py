@@ -1,5 +1,5 @@
 
-rooms_list = ''
+ROOMS_LIST = ''
 null = ''
 
 """
