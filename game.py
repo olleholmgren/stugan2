@@ -1,10 +1,16 @@
 from rooms import rooms_list
 
-print('\n--------------------------------\n--------------------------------\n\nWelcome to this peaceful,\nmysterious space in time/time in space\n\n--------------------------------\n--------------------------------\n')
+player_name = 'player'
+game_question = ''
+begin_game = ''
 
-player_name = str(input('Please enter your name:\n'))
-print(f'Nihaody {player_name}!')
+def print_lines():
+    print('----------------------------------------------')
+    print('----------------------------------------------')
+
+
 condition = str(input(f'How are you feeling today {player_name}?\n'))
+
 condition_follow_up1 = str(input(f'I see, why do you think you are feeling {condition}?\n'))
 condition_follow_up2 = str(input('Alright. . . Well, do you want to talk to me about it?\n'))
 print('Ok. I totally understand.')
@@ -14,10 +20,9 @@ if game_question == 'yes':
 else: print('oh I see')
 
 print('Firstly, let me tell you how to play the game\n----------\n----------')
-print('You navigate by giving me a command of direction.\nn for north, s for south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
+print('You navigate by giving me a command of direction.\nn for north, s for 
+        south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
 
-game_question = ''
-begin_game = ''
 
 def validate_answer(game_question):
     while True:
