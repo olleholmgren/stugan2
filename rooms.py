@@ -47,7 +47,7 @@ env_list = [
     {
         'number': 4,
         'name': 'The Waterfall',
-        'scenario': 'You end up at a cliff. You can not walk further north. If you lose your focus now i could be fatal.',
+        'scenario': 'You end up at a cliff. You can not walk further north. If you lose your focus now it could be fatal.',
         'n': null,
         's': 3,
         'e': 5,
@@ -56,7 +56,7 @@ env_list = [
     {
         'number': 5,
         'name': 'The Path with cloudberrys',
-        'scenario': 'You continue your journey along the path. You say to yourself that it is safest this way. On the ground you see beutiful small orange and red bloudberries.',
+        'scenario': 'You continue your journey along the path. You say to yourself that it is safest this way. On the ground you see beutiful small orange and red cloudberries.',
         'n': null,
         's': null,
         'e': 6,
@@ -82,7 +82,7 @@ env_list = [
     },
     {
         'number': 8,
-        'name': 'The deeper Forest',
+        'name': 'The Deeper Forest',
         'scenario': 'You seem lost. You have gone longer into the dark smelly forest when you suddenly see some light to the south. Your nose tells you to go where the light is.',
         'n': 7,
         's': 9,
@@ -91,7 +91,7 @@ env_list = [
     },
     {
         'number': 9,
-        'name': 'The fence',
+        'name': 'The Fence',
         'scenario': 'My goodness. You thought that you would never come out of that forest, but here you are. Impossible to go more south since there is a mystical red fence blocking the way',
         'n': 8,
         's': null,
@@ -118,8 +118,8 @@ env_list = [
     },
     {
         'number': 12,
-        'name': 'The fireplace',
-        'scenario': 'This is the furtherest to the west that you can come. You see drunk people sitting by a fireplace. They are playing guitar, accordion and cooking food at the same time. They are very happy.',
+        'name': 'The Fireplace',
+        'scenario': 'This is the furtherest to the west as you can come. You see drunk people sitting by a fireplace. They are playing guitar, accordion and cooking food at the same time. They are very happy.',
         'n': 13,
         's': null,
         'e': 11,
@@ -127,8 +127,8 @@ env_list = [
     },
     {
         'number': 13,
-        'name': 'The river',
-        'scenario': 'You walk on the bridge, scared but stubborn. You are now at the east side of the river',
+        'name': 'The River',
+        'scenario': 'You walk on the bridge, scared but stubborn as you cross it. You are now at the east side of the river',
         'n': 14,
         's': 12,
         'e': 2,
@@ -148,8 +148,8 @@ env_list = [
         'name': 'The Fall',
         'scenario': 'You feel helpless as you step out the waterfall. Is this it? The cold water and you are suddenly racing against each other vertically. This is the end',
         'n': null,
-        's': 14,
-        'e': 4,
+        's': null,
+        'e': null,
         'w': null,
     },
 ]

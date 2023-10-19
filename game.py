@@ -110,7 +110,7 @@ def build_way(env_number):
     """
 
     valid_way = []
-    if env_list[env_number]['n']:
+    if env_list[env_number]['n']:e
         valid_way.append('n')
     if env_list[env_number]['s']:
         valid_way.append('s')
