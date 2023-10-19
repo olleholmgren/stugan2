@@ -14,6 +14,7 @@ def intro():
     print_lines()
 
 def get_player_name():
+    global player_name
     player_name = str(input('Please enter your name:\n'))
     if player_name == '':
         player_name = 'James Pond'
