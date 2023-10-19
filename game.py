@@ -45,6 +45,7 @@ def intro():
     """
     Introduce the player and give instructions
     """
+
     global game_question
     condition = str(input(f'How are you feeling today, {player_name}?\n'))
     condition_follow_up1 = str(input(f'I see, why do you think you are feeling {condition}?\n'))
@@ -60,16 +61,6 @@ def intro():
     print_lines()
     print('You navigate by giving me a command of direction.\nn for north, s for' 
           'south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
-
-
-def validate_answer(game_question):
-    
-    """
-    Validate the input from the player
-    """
-
-    while True:
-        print(game_question)
 
 
 def game():
@@ -114,6 +105,10 @@ def navigate(env_number):
 
 def build_way(env_number):
 
+    """
+    Build the way for the navigate function and list the possible direction
+    """
+
     valid_way = []
     if env_list[env_number]['n']:
         valid_way.append('n')
@@ -126,6 +121,5 @@ def build_way(env_number):
     return valid_way
 
 
-
-# Run game
+# Run the game
 game()
