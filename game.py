@@ -4,16 +4,34 @@ player_name = 'player'
 game_question = ''
 begin_game = ''
 
+
 def print_lines():
+
+    """
+    Style the game with lines
+    """
+
     print('--------------------------------------------------')
     print('--------------------------------------------------')
 
-def intro():
+
+def greet():
+
+    """
+    Greet the player
+    """
+
     print_lines()
     print('Welcome to this peaceful, mysterious space in time')
     print_lines()
 
+
 def get_player_name():
+
+    """
+    Register the name of the player
+    """
+
     global player_name
     player_name = str(input('Please enter your name:\n'))
     if player_name == '':
@@ -22,7 +40,13 @@ def get_player_name():
     print(f'Nihaody, {player_name}!')
     return player_name
 
-def beginning():
+
+def intro():
+
+    """
+    Introduce the player and give instructions
+    """
+
     condition = str(input(f'How are you feeling today, {player_name}?\n'))
     condition_follow_up1 = str(input(f'I see, why do you think you are feeling {condition}?\n'))
     condition_follow_up2 = str(input('Alright. . . Well, do you want to talk to me about it?\n'))
@@ -38,14 +62,26 @@ def beginning():
     print('You navigate by giving me a command of direction.\nn for north, s for' 
           'south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
 
+
 def validate_answer(game_question):
+    
+    """
+    Validate the input from the player
+    """
+
     while True:
         print(game_question)
 
+
 def game():
-    intro()
+
+    """
+    Main function to run the game
+    """
+
+    greet()
     get_player_name()
-    beginning()
+    intro()
     directions = ['n', 's', 'e', 'w']
     answer = ['yes', 'no']
 
@@ -56,5 +92,7 @@ def game():
     if game_question == 'yes':
             return(rooms_list[1]['environment'])
 
+
+# Run game
 game()
 print(rooms_list[1]['environment'])
