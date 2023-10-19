@@ -1,4 +1,4 @@
-from rooms import rooms_list
+from rooms import env_list
 
 player_name = 'player'
 game_question = ''
@@ -90,9 +90,29 @@ def game():
     while game_question != answer:
         return game_question
     if game_question == 'yes':
-            return(rooms_list[1]['environment'])
+        navigate(1)
+    if game_question == 'no':
+        print('Ok, that is fine. You can stay in the tent')
+
+
+def navigate(env_number):
+
+    """
+    Navigate the paths through all environments
+    """
+    
+    print_lines()
+    print(env_list[env_number]['name'])
+    print(env_list[env_number]['scenario'])
+    valid_way = build_way(env_number)
+    navigate(env_list[env_number])
+
+
+def build_way(env_number):
+
+    valid_way = []
+
 
 
 # Run game
 game()
-print(rooms_list[1]['environment'])
