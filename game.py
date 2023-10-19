@@ -111,6 +111,15 @@ def navigate(env_number):
 def build_way(env_number):
 
     valid_way = []
+    if env_list[env_number]['n']:
+        valid_way.append('n')
+    if env_list[env_number]['s']:
+        valid_way.append('s')
+    if env_list[env_number]['e']:
+        valid_way.append('e')
+    if env_list[env_number]['w']:
+        valid_way.append('w')
+    return valid_way
 
 
 
