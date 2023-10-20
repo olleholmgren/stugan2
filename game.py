@@ -23,7 +23,7 @@ def greet():
     """
 
     print_lines()
-    print('Welcome to this peaceful, mysterious space in time')
+    slow_print('Welcome to this peaceful, mysterious space in time')
     print_lines()
 
 
@@ -37,8 +37,8 @@ def get_player_name():
     player_name = str(input('Please enter your name:\n'))
     if player_name == '':
         player_name = 'James Pond'
-        print('Well, as you did not tell me your name I will just call you James Pond.')
-    print(f'Nihaody, {player_name}!')
+        slow_print('Well, as you did not tell me your name I will just call you James Pond.')
+    slow_print(f'Nihaody, {player_name}!')
     return player_name
 
 
@@ -58,10 +58,11 @@ def intro():
         print('ok, lets go!')
     else: 
         print('oh I see')
+    time.sleep(1)
     print_lines()
-    print('Firstly, let me tell you how to play the game')
+    slow_print('Firstly, let me tell you how to play the game')
     print_lines()
-    print('You navigate by giving me a command of direction.\nn for north, s for' 
+    slow_print('You navigate by giving me a command of direction.\nn for north, s for' 
           'south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
 
 
@@ -72,9 +73,9 @@ def game():
     """
 
     slow_print(text)
-    #greet()
-    #get_player_name()
-    #intro()
+    greet()
+    get_player_name()
+    intro()
     directions = ['n', 's', 'e', 'w']
     answer = ['yes', 'no']
 
@@ -105,8 +106,10 @@ def navigate(env_number):
     
     print_lines()
     slow_print(env_list[env_number]['name'])
+    print_lines()
     time.sleep(1)
     slow_print(env_list[env_number]['scenario'])
+    time.sleep(1)
     if env_number == 15:
         slow_print('Game over!')
         sys.exit()
