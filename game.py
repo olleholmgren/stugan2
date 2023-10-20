@@ -1,10 +1,11 @@
 import sys
 import time
-from rooms import env_list
+from environments import env_list
 
 player_name = 'player'
 game_question = ''
 text = ''
+text_being_printed = False
 
 def print_lines():
 
@@ -79,6 +80,7 @@ def game():
     get_player_name()
     intro()
     answer = ['yes', 'no']
+    user_input = prevent_input()
 
     slow_print('POFF!')
     time.sleep(1)
@@ -157,11 +159,28 @@ def slow_print(text):
     Print out presented text in a slower motion
     """
 
+    global text_being_printed
+    text_being_printed = True
     for i in text:
         sys.stdout.write(i)
         sys.stdout.flush()
         time.sleep(0.05)
+    text_being_printed = False
     print('')
+
+
+def prevent_input():
+
+    """
+    Get input from the player while preventing input during slow printing
+    """
+
+    while True:
+        user_input = input()
+        if not text_being_printed:
+            return user_input
+        else:
+            slow_print("Hey! Please wait for me to finish")
 
 
 # Run the game
