@@ -1,8 +1,10 @@
 import sys
+import time
 from rooms import env_list
 
 player_name = 'player'
 game_question = ''
+text = ''
 
 
 def print_lines():
@@ -70,21 +72,22 @@ def game():
     Main function to run the game
     """
 
-    greet()
-    get_player_name()
-    intro()
+    slow_print(text)
+    #greet()
+    #get_player_name()
+    #intro()
     directions = ['n', 's', 'e', 'w']
     answer = ['yes', 'no']
 
-    print('POFF! You wake up. Smoke is around you but disappearing. You find yourself lying inside a green tent. What do you want to do?')
+    slow_print('POFF! You wake up. Smoke is around you but disappearing. You find yourself lying inside a green tent. What do you want to do?')
     game_question = input('Do you want to step outside the tent? "yes" or "no"?\n')
     while game_question not in answer:
-        print('Invalid input, please type "yes" or "no"')
+        slow_print('Invalid input, please type "yes" or "no"')
         game_question = input('Do you want to step outside the tent? "yes" or "no"?\n')
     if game_question == 'yes':
         navigate(1)
     else:
-        print('Ok, that is fine. You can stay in the tent')
+        slow_print('Ok, that is fine. You can stay in the tent')
 
 
 def navigate(env_number):
@@ -94,15 +97,15 @@ def navigate(env_number):
     """
     
     print_lines()
-    print(env_list[env_number]['name'])
-    print(env_list[env_number]['scenario'])
+    slow_print(env_list[env_number]['name'])
+    slow_print(env_list[env_number]['scenario'])
     if env_number == 15:
-        print('Game over!')
+        slow_print('Game over!')
         sys.exit()
     valid_way = build_way(env_number)
     direction = input('')
     if direction not in valid_way:
-        print(f'Hey, that is not a valid direction from this location. Pick one of these, please: {valid_way}')
+        slow_print(f'Hey, that is not a valid direction from this location. Pick one of these, please: {valid_way}')
         direction = input('')
     navigate(env_list[env_number][direction])
 
@@ -124,6 +127,12 @@ def build_way(env_number):
         valid_way.append('w')
     return valid_way
 
+def slow_print(text):
+    for i in text:
+        sys.stdout.write(i)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    print('')
 
 # Run the game
 game()
