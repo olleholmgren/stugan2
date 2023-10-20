@@ -6,7 +6,6 @@ player_name = 'player'
 game_question = ''
 text = ''
 
-
 def print_lines():
 
     """
@@ -79,10 +78,18 @@ def game():
     directions = ['n', 's', 'e', 'w']
     answer = ['yes', 'no']
 
-    slow_print('POFF! You wake up. Smoke is around you but disappearing. You find yourself lying inside a green tent. What do you want to do?')
+    slow_print('POFF!')
+    time.sleep(1)
+    slow_print('You wake up.')
+    time.sleep(1)
+    slow_print('Smoke is around you but disappearing.')
+    time.sleep(1)
+    slow_print('You find yourself lying inside a green tent. What do you want to do?')
+    time.sleep(1)
     game_question = input('Do you want to step outside the tent? "yes" or "no"?\n')
     while game_question not in answer:
         slow_print('Invalid input, please type "yes" or "no"')
+        time.sleep(1)
         game_question = input('Do you want to step outside the tent? "yes" or "no"?\n')
     if game_question == 'yes':
         navigate(1)
@@ -98,6 +105,7 @@ def navigate(env_number):
     
     print_lines()
     slow_print(env_list[env_number]['name'])
+    time.sleep(1)
     slow_print(env_list[env_number]['scenario'])
     if env_number == 15:
         slow_print('Game over!')
@@ -127,12 +135,19 @@ def build_way(env_number):
         valid_way.append('w')
     return valid_way
 
+
 def slow_print(text):
+
+    """
+    Print out presented text in a slower motion
+    """
+
     for i in text:
         sys.stdout.write(i)
         sys.stdout.flush()
         time.sleep(0.05)
     print('')
+
 
 # Run the game
 game()
