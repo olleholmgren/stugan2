@@ -54,15 +54,17 @@ def intro():
     condition_follow_up2 = str(input('Alright. . . Well, do you want to talk to me about it?\n'))
     print('Ok. I totally understand.')
     game_question = str(input(f'Do you want to play an adventure game with me {player_name}?\n'))
+    
     if game_question == 'yes':
         print('ok, lets go!')
     else: 
         print('oh I see')
+
     time.sleep(1)
     print_lines()
     slow_print('Firstly, let me tell you how to play the game')
     print_lines()
-    slow_print('You navigate by giving me a command of direction.\nn for north, s for' 
+    slow_print('You navigate by giving me a command of direction.\nn for north, s for ' 
           'south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
 
 
@@ -76,7 +78,6 @@ def game():
     greet()
     get_player_name()
     intro()
-    directions = ['n', 's', 'e', 'w']
     answer = ['yes', 'no']
 
     slow_print('POFF!')
@@ -88,10 +89,12 @@ def game():
     slow_print('You find yourself lying inside a green tent. What do you want to do?')
     time.sleep(1)
     game_question = input('Do you want to step outside the tent? "yes" or "no"?\n')
+    
     while game_question not in answer:
         slow_print('Invalid input, please type "yes" or "no"')
         time.sleep(1)
         game_question = input('Do you want to step outside the tent? "yes" or "no"?\n')
+    
     if game_question == 'yes':
         navigate(1)
     else:
@@ -110,15 +113,24 @@ def navigate(env_number):
     time.sleep(1)
     slow_print(env_list[env_number]['scenario'])
     time.sleep(1)
+
     if env_number == 15:
         slow_print('Game over!')
         sys.exit()
+
     valid_way = build_way(env_number)
     direction = input('')
-    if direction not in valid_way:
+    
+    try:
+        if direction not in valid_way:
+            raise ValueError(f'Hey, that is not a valid direction from this location. Pick one of these, please: {valid_way}')
+        navigate(env_list[env_number][direction])
+    except KeyError:
         slow_print(f'Hey, that is not a valid direction from this location. Pick one of these, please: {valid_way}')
-        direction = input('')
-    navigate(env_list[env_number][direction])
+        navigate(env_number)
+    except ValueError as e:
+        slow_print(str(e))
+        navigate(env_number)
 
 
 def build_way(env_number):

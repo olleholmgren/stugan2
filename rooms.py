@@ -19,7 +19,7 @@ env_list = [
     {
         'number': 1,
         'name': 'The Tent Entrance',
-        'scenario': 'You are standing outside your tent',
+        'scenario': 'You are standing outside your tent. \nYou can now navigate by typing directions "n"(north), "s"(south), "e"(east) or "w"(west)',
         'n': 0,
         's': 10,
         'e': 8,
