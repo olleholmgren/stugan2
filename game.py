@@ -1,3 +1,4 @@
+import sys
 from rooms import env_list
 
 player_name = 'player'
@@ -95,6 +96,9 @@ def navigate(env_number):
     print_lines()
     print(env_list[env_number]['name'])
     print(env_list[env_number]['scenario'])
+    if env_number == 15:
+        print('Game over!')
+        sys.exit()
     valid_way = build_way(env_number)
     direction = input('')
     if direction not in valid_way:
@@ -110,7 +114,7 @@ def build_way(env_number):
     """
 
     valid_way = []
-    if env_list[env_number]['n']:e
+    if env_list[env_number]['n']:
         valid_way.append('n')
     if env_list[env_number]['s']:
         valid_way.append('s')
