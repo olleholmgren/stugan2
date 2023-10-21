@@ -83,7 +83,9 @@ env_list = [
     {
         'number': 8,
         'name': 'The Deeper Forest',
-        'scenario': 'You seem lost. You have gone longer into the dark smelly forest when you suddenly see some light to the south. Your nose tells you to go where the light is.',
+        'scenario': 'You seem lost. You have gone longer into the dark '
+                    'smelly forest when you suddenly see some light to '
+                    'the south. Your nose tells you to go where the light is.',
         'n': 7,
         's': 9,
         'e': null,
@@ -92,7 +94,10 @@ env_list = [
     {
         'number': 9,
         'name': 'The Fence',
-        'scenario': 'My goodness. You thought that you would never come out of that forest, but here you are. Impossible to go more south since there is a mystical red fence blocking the way',
+        'scenario': 'My goodness. You thought that you would never come '
+                    'out of that forest, but here you are. Impossible to '
+                    'go more south since there is a mystical red fence '
+                    'blocking the way',
         'n': 8,
         's': null,
         'e': null,
@@ -101,7 +106,9 @@ env_list = [
     {
         'number': 10,
         'name': 'The Beach',
-        'scenario': 'What the heck? You all of a suddden find yourself at a beach. Just by a lake with people waterskiing out there but you can not see who they are.',
+        'scenario': 'What the heck? You all of a suddden find yourself '
+                    'at a beach. Just by a lake with people waterskiing '
+                    'out there but you can not see who they are.',
         'n': 1,
         's': null,
         'e': 9,
@@ -110,7 +117,10 @@ env_list = [
     {
         'number': 11,
         'name': 'The Jetty',
-        'scenario': 'You walk along the beach until you come to a jetty. The boat that they use for water-sports must come from this jetty. You see footsteps made out of water on the wooden jetty.',
+        'scenario': 'You walk along the beach until you come to a jetty. '
+                    'The boat that they use for water-sports must come '
+                    'from this jetty. You see footsteps made out of '
+                    'water on the wooden jetty.',
         'n': 2,
         's': null,
         'e': 10,
@@ -119,7 +129,11 @@ env_list = [
     {
         'number': 12,
         'name': 'The Fireplace',
-        'scenario': 'This is the furtherest to the west as you can come. You see drunk people sitting by a fireplace. They are playing guitar, accordion and cooking food at the same time. They are very happy.',
+        'scenario': 'This is the furtherest to the west as you can come. '
+                    'You see drunk people sitting by a fireplace. '
+                    'They are playing guitar, accordion and '
+                    'cooking food at the same time. '
+                    'They seem very happy.',
         'n': 13,
         's': null,
         'e': 11,

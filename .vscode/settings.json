@@ -21,6 +21,6 @@
       "**/CVS": true
    },
    "files.autoSave": "off",
-   "workbench.colorTheme": "Monokai Dimmed",
+   "workbench.colorTheme": "Default Dark+",
    "editor.defaultFormatter": "HookyQR.beautify"
 }
