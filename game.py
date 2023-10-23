@@ -7,6 +7,7 @@ game_question = ''
 text = ''
 text_being_printed = False
 
+
 def print_lines():
 
     """
@@ -38,7 +39,8 @@ def get_player_name():
     player_name = str(input('Please enter your name:\n'))
     if player_name == '':
         player_name = 'James Pond'
-        slow_print('Well, as you did not tell me your name I will just call you James Pond.')
+        slow_print('Well, as you did not tell me your name I '
+                   'will just call you James Pond.')
     slow_print(f'Nihaody, {player_name}!')
     return player_name
 
@@ -51,22 +53,26 @@ def intro():
 
     global game_question
     condition = str(input(f'How are you feeling today, {player_name}?\n'))
-    condition_follow_up1 = str(input(f'I see, why do you think you are feeling {condition}?\n'))
-    condition_follow_up2 = str(input('Alright. . . Well, do you want to talk to me about it?\n'))
+    condition_follow_up1 = str(input(f'I see, why do you think you are feeling'
+                                     '{condition}?\n'))
+    condition_follow_up2 = str(input('Alright. . . Well, do you want to talk '
+                                     'to me about it?\n'))
     print('Ok. I totally understand.')
-    game_question = str(input(f'Do you want to play an adventure game with me {player_name}?\n'))
-    
+    game_question = str(input(f'Do you want to play an adventure game with me '
+                              '{player_name}?\n'))
+
     if game_question == 'yes':
         print('ok, lets go!')
-    else: 
+    else:
         print('oh I see')
 
     time.sleep(1)
     print_lines()
     slow_print('Firstly, let me tell you how to play the game')
     print_lines()
-    slow_print('You navigate by giving me a command of direction.\nn for north, s for ' 
-          'south, e for east and w for west.\nYou can answer questions with "yes" or "no"')
+    slow_print('You navigate by giving me a command of direction.\nn '
+               'for north, s for south, e for east and w for west.\nYou can '
+               'answer questions with "yes" or "no"')
 
 
 def game():
@@ -88,15 +94,18 @@ def game():
     time.sleep(1)
     slow_print('Smoke is around you but disappearing.')
     time.sleep(1)
-    slow_print('You find yourself lying inside a green tent. What do you want to do?')
+    slow_print('You find yourself lying inside a green tent. What do you want '
+               'to do?')
     time.sleep(1)
-    game_question = input('Do you want to step outside the tent? "yes" or "no"?\n')
-    
+    game_question = input('Do you want to step outside the tent? "yes" or '
+                          "no"?\n')
+
     while game_question not in answer:
         slow_print('Invalid input, please type "yes" or "no"')
         time.sleep(1)
-        game_question = input('Do you want to step outside the tent? "yes" or "no"?\n')
-    
+        game_question = input('Do you want to step outside the tent? "yes" or '
+                              '"no"?\n')
+
     if game_question == 'yes':
         navigate(1)
     else:
@@ -108,7 +117,7 @@ def navigate(env_number):
     """
     Navigate the paths through all environments
     """
-    
+
     print_lines()
     slow_print(env_list[env_number]['name'])
     print_lines()
@@ -122,13 +131,16 @@ def navigate(env_number):
 
     valid_way = build_way(env_number)
     direction = input('')
-    
+
     try:
         if direction not in valid_way:
-            raise ValueError(f'Hey, that is not a valid direction from this location. Pick one of these, please: {valid_way}')
+            raise ValueError(f'Hey, that is not a valid direction from this '
+                             'location. Pick one of these, '
+                             'please: {valid_way}')
         navigate(env_list[env_number][direction])
     except KeyError:
-        slow_print(f'Hey, that is not a valid direction from this location. Pick one of these, please: {valid_way}')
+        slow_print(f'Hey, that is not a valid direction from this location. '
+                   'Pick one of these, please: {valid_way}')
         navigate(env_number)
     except ValueError as e:
         slow_print(str(e))
