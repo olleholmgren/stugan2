@@ -54,13 +54,13 @@ def intro():
     global game_question
     condition = str(input(f'How are you feeling today, {player_name}?\n'))
     condition_follow_up1 = str(input(f'I see, why do you think you are feeling'
-                                     '{condition}?\n'))
+                                     f' {condition}?\n'))
     condition_follow_up2 = str(input('Alright. . . Well, do you want to talk '
                                      'to me about it?\n'))
     print('Ok. I totally understand.')
     game_question = str(input(f'Do you want to play an adventure game with me '
-                              '{player_name}?\n'))
-
+                              f'{player_name}?\n'))
+    
     if game_question == 'yes':
         print('ok, lets go!')
     else:
@@ -98,7 +98,7 @@ def game():
                'to do?')
     time.sleep(1)
     game_question = input('Do you want to step outside the tent? "yes" or '
-                          "no"?\n')
+                          '"no"?\n')
 
     while game_question not in answer:
         slow_print('Invalid input, please type "yes" or "no"')
@@ -130,20 +130,20 @@ def navigate(env_number):
         sys.exit()
 
     valid_way = build_way(env_number)
-    direction = input('')
-
-    try:
-        if direction not in valid_way:
-            raise ValueError(f'Hey, that is not a valid direction from this '
-                             'location. Pick one of these, '
-                             'please: {valid_way}')
-        navigate(env_list[env_number][direction])
-    except KeyError:
-        slow_print(f'Hey, that is not a valid direction from this location. '
-                   'Pick one of these, please: {valid_way}')
-        navigate(env_number)
-    except ValueError as e:
-        slow_print(str(e))
+    
+    while True:
+        try:
+            direction = input('')
+            if direction not in valid_way:
+                raise ValueError(f'Hey, that is not a valid direction from '
+                                 f'this location. Pick one of these, '
+                                 f'please: {valid_way}')
+            navigate(env_list[env_number][direction])
+        except KeyError:
+            slow_print(f'Hey, that is not a valid direction from this '
+                       f'location. Pick one of these, please: {valid_way}')
+        except ValueError as e:
+            slow_print(str(e))
         navigate(env_number)
 
 
