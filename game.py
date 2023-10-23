@@ -57,14 +57,14 @@ def intro():
                                      f' {condition}?\n'))
     condition_follow_up2 = str(input('Alright. . . Well, do you want to talk '
                                      'to me about it?\n'))
-    print('Ok. I totally understand.')
+    slow_print('Ok. I totally understand.')
     game_question = str(input(f'Do you want to play an adventure game with me '
                               f'{player_name}?\n'))
 
     if game_question == 'yes':
-        print('ok, lets go!')
+        slow_print('ok, lets go!')
     else:
-        print('oh I see')
+        slow_print('oh I see')
         intro()
 
     time.sleep(1)
