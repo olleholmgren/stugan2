@@ -60,11 +60,12 @@ def intro():
     print('Ok. I totally understand.')
     game_question = str(input(f'Do you want to play an adventure game with me '
                               f'{player_name}?\n'))
-    
+
     if game_question == 'yes':
         print('ok, lets go!')
     else:
         print('oh I see')
+        intro()
 
     time.sleep(1)
     print_lines()
@@ -80,7 +81,7 @@ def game():
     """
     Main function to run the game
     """
-
+    
     slow_print(text)
     greet()
     get_player_name()
@@ -126,11 +127,13 @@ def navigate(env_number):
     time.sleep(1)
 
     if env_number == 15:
+        slow_print('--------------------------------------------------')
         slow_print('Game over!')
+        slow_print('--------------------------------------------------')
         sys.exit()
 
     valid_way = build_way(env_number)
-    
+
     while True:
         try:
             direction = input('')
@@ -193,6 +196,10 @@ def prevent_input():
             return user_input
         else:
             slow_print("Hey! Please wait for me to finish")
+
+
+
+# if __name__ == '__main__':
 
 
 # Run the game
