@@ -74,43 +74,7 @@ def intro():
     slow_print('You navigate by giving me a command of direction.\nn '
                'for north, s for south, e for east and w for west.\nYou can '
                'answer questions with "yes" or "no"')
-
-
-def game():
-
-    """
-    Main function to run the game
-    """
-    
-    slow_print(text)
-    greet()
-    get_player_name()
-    intro()
-    answer = ['yes', 'no']
-    user_input = prevent_input()
-
-    slow_print('POFF!')
-    time.sleep(1)
-    slow_print('You wake up.')
-    time.sleep(1)
-    slow_print('Smoke is around you but disappearing.')
-    time.sleep(1)
-    slow_print('You find yourself lying inside a green tent. What do you want '
-               'to do?')
-    time.sleep(1)
-    game_question = input('Do you want to step outside the tent? "yes" or '
-                          '"no"?\n')
-
-    while game_question not in answer:
-        slow_print('Invalid input, please type "yes" or "no"')
-        time.sleep(1)
-        game_question = input('Do you want to step outside the tent? "yes" or '
-                              '"no"?\n')
-
-    if game_question == 'yes':
-        navigate(1)
-    else:
-        slow_print('Ok, that is fine. You can stay in the tent')
+    slow_print('Hit ENTER to continue')
 
 
 def navigate(env_number):
@@ -198,9 +162,42 @@ def prevent_input():
             slow_print("Hey! Please wait for me to finish")
 
 
+def game():
 
-# if __name__ == '__main__':
+    """
+    Main function to run the game
+    """
+    
+    slow_print(text)
+    greet()
+    get_player_name()
+    intro()
+    answer = ['yes', 'no']
+    user_input = prevent_input()
+
+    slow_print('POFF!')
+    time.sleep(1)
+    slow_print('You wake up.')
+    time.sleep(1)
+    slow_print('Smoke is around you but disappearing.')
+    time.sleep(1)
+    slow_print('You find yourself lying inside a green tent. What do you want '
+               'to do?')
+    time.sleep(1)
+    game_question = input('Do you want to step outside the tent? "yes" or '
+                          '"no"?\n')
+
+    while game_question not in answer:
+        slow_print('Invalid input, please type "yes" or "no"')
+        time.sleep(1)
+        game_question = input('Do you want to step outside the tent? "yes" or '
+                              '"no"?\n')
+
+    if game_question == 'yes':
+        navigate(1)
+    else:
+        slow_print('Ok, that is fine. You can stay in the tent')
 
 
-# Run the game
-game()
+if __name__ == '__main__':
+    game()
