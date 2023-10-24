@@ -14,12 +14,17 @@ This is my first time I actually used the wireframe software. I have use Balsami
 ![wireframe-image](/assets/Images/wireframe.png)
 
 ## Gameplay
-The player is greeted when run.py is launched. In the beginning the computer will ask the player about the mood for this day and if the player chooses to continue talk to the computer, there will be more questions - the game works like a computed therapist. 
-If the player then wants to play the adventure game, the game will start, or if not, the player will be waved goodbye to and be told to come back when feeling better.
+The player is greeted when game.py is launched. In the beginning the program will ask the player about the mood for this day and no matter what the player answers, it will proceed with following up questions - the game works like a computed therapist. 
+If the player then wants to play the adventure game, the game will start, or if not, the player will be thrown back to the first question of the therapy session.
+
+The gameplay works as following: All environments are presented with a headline. You can choose 4 different directions('n', 's', 'e', 'w'). If a chosen direction is not possible for the current environment that you are in, the program will give you an error message stating that your chosen direction is not valid. The program will then give you a list of valid directions.
+
+When you navigate through the game and come to the ending environment number 15, you will get a game over message and the program will shut down.
+
 ![map-environment-image](/assets/Images/game-map-environment.png)
 
 ## Game map
-The game map is simple. Just a grid structure with boxes that each have a corrensponding number. I found myself numbering in an order that I wanted, then it hit me - the boxes are structured just like the Fibonacci Numbers. This coincidence got me scared for a while but I decided to move on.
+The game map is simple. Just a grid structure with boxes that each have a corrensponding number. I found myself numbering in an order that I wanted, then it hit me - the boxes are structured just like the Fibonacci Numbers. This coincidence got me scared for a while but I decided to move on. Here you can see all the environments and directions available in this game.
 
 ![map-image](/assets/Images/game-map.png)
 
@@ -27,9 +32,11 @@ The game map is simple. Just a grid structure with boxes that each have a corren
 In order to organise my ideas and brainwork, I decided to make a flow-chart with Balsamiq
 ![flow-chart-image](/assets/Images/flow-chart.png)
 
-## User goals
-
 ## User stories
+
+* As a user, I want to use a text-based program asking me about my current mood.
+* As a user, I want to be able to play a text-adventure game where I am guided through beautiful landscapes.
+* As a user, I want the environments being described in text so that I can make them up in my own mind.
 
 # Testing
 
@@ -51,6 +58,21 @@ The game was tested thoroughly for handling invalid user input and correct game 
 |                     |                                 |                                 |             |
 |                     |                                 |                                 |             |
 
+### Validator testing
+
+![Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+
+The code from this project has been tested in the CI Python Linter app to ensure it will comply with Pylint standards.
+- No errors
+
+## Technologies used
+
+- Python has been used as the main programming language for this application
+- Python sys module has been imported and used to manipulate printed text in the slow_print function and also when exiting the game at the game over screen
+- Python time module has been imported and used to set a pause while printing text throughout the game
+- GitPod has been used as the IDE workspace throughout the project
+- Github has been use to store the repository as well as version control with git
+- Heroku has been used to deploy the project
 
 ## Deployment
 
