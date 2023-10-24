@@ -50,3 +50,42 @@ The game was tested thoroughly for handling invalid user input and correct game 
 |                     |                                 |                                 |             |
 |                     |                                 |                                 |             |
 |                     |                                 |                                 |             |
+
+
+## Deployment
+
+### Version Control
+
+The version control was maintained using Git within GitPod to push code to the main repository.
+
+ * From the IDE terminal type 'git add .', to make changes and/or updates to the files.
+
+ * Type 'git commit -m "insert a short descriptive text"', which commits the changes and updates the files.
+
+ * Use the 'git push' command, which pushes the committed changes to the main repository. 
+
+ ### Page Deployment
+
+ The app was deployed to Heroku CLI. The steps to deploy are as follows:
+
+ * After creating an account and logging in, click 'New' to create a new app from the dashboard.
+ * Create a unique name for the app and select my region; press 'Create app'.
+ * Go to 'Settings' and navigate to 'Config Vars'.
+ * Add Config Vars. 
+   * For this app was only used: `KEY` = `PORT` : `VALUE` = `8000`.
+ * Add buildpacks `Python` and `NodeJS` - in this order.
+ * Click the `Deploy Branch`.
+ * Scroll Down to Deployment Method and select GitHub.
+ * Select the repository to be deployed and connect to Heroku.
+ * Scroll down to deploy: 
+    * `Option 1` is selecting Automatic deploys (Will Update Automatically with every "git push"). This was chosen for this project.
+
+ * Live deployment [Wilderness](https://.herokuapp.com/)
+
+## Credits
+- [Codeinstiute] (https://learn.codeinstitute.net/courses/course)
+- 
+
+## Acknowledgments
+
+- Big Thank you to my mentor for this project - Spencer Bariball. His guidance and help made this project so much more do-able.
