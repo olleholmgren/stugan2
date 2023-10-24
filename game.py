@@ -178,7 +178,7 @@ def slow_print(text):
     text_being_printed = True
     for i in text:
         sys.stdout.write(i)
-        sys.stdout.flush()
+        sys.stdout.flush(0.05)
         time.sleep(0.05)
     text_being_printed = False
     print('')
