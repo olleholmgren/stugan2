@@ -81,8 +81,11 @@ The game was tested thoroughly for handling invalid user input and correct game 
 
 [Code Institute Python Linter](https://pep8ci.herokuapp.com/)
 
-The code from this project has been tested in the CI Python Linter app to ensure it will comply with Pylint standards.
+The code from this project has been tested in the CI Python Linter app to ensure it will comply with the Pylint standards.
+
 - No errors
+
+![linter_run](/assets/Images/linter_run.png)
 
 ## Technologies used
 
