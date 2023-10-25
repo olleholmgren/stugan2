@@ -1,6 +1,17 @@
 # The Wilderness
 
-The live project site can be found here
+The live project site can be found [here](https://stugan2.herokuapp.com)
+
+- Screenshots of the deployed game
+
+![screenshot1](/assets/Images/screenshot1.png)
+
+![screenshot2](/assets/Images/screenshot2.png)
+
+![screenshot3](/assets/Images/screenshot3.png)
+
+![screenshot4](/assets/Images/screenshot4.png)
+
 
 The Wilderness is a 2-in-1 app containing a mix of well-being consultation as well as an adventure game!
 
@@ -15,9 +26,12 @@ This is my first time I actually used the wireframe software. I have use Balsami
 
 ## Gameplay
 The player is greeted when game.py is launched. In the beginning the program will ask the player about the mood for this day and no matter what the player answers, it will proceed with following up questions - the game works like a computed therapist. 
-If the player then wants to play the adventure game, the game will start, or if not, the player will be thrown back to the first question of the therapy session.
+If the player then wants to play the adventure game, the game will start, or if not, the player will be politely wawed good bye and the program will shut down.
 
-The gameplay works as following: All environments are presented with a headline. You can choose 4 different directions('n', 's', 'e', 'w'). If a chosen direction is not possible for the current environment that you are in, the program will give you an error message stating that your chosen direction is not valid. The program will then give you a list of valid directions.
+The gameplay works as following: All environments are presented with a headline. You can choose 4 different directions('n', 's', 'e', 'w'). If a chosen direction is not possible for the current environment that you are in, the program will give you an error message stating that your chosen direction is not valid. The program will then give you a list of valid directions. 
+Screenshot for reference:
+
+![errorhandling](/assets/Images/errorhandling.png)
 
 When you navigate through the game and come to the ending environment number 15, you will get a game over message and the program will shut down.
 
@@ -30,6 +44,7 @@ The game map is simple. Just a grid structure with boxes that each have a corren
 
 ## Flow chart
 In order to organise my ideas and brainwork, I decided to make a flow-chart with Balsamiq
+
 ![flow-chart-image](/assets/Images/flow-chart.png)
 
 ## User stories
@@ -37,6 +52,10 @@ In order to organise my ideas and brainwork, I decided to make a flow-chart with
 * As a user, I want to use a text-based program asking me about my current mood.
 * As a user, I want to be able to play a text-adventure game where I am guided through beautiful landscapes.
 * As a user, I want the environments being described in text so that I can make them up in my own mind.
+
+* As a text-game writer, I want to create a text-based game which is simple and without possible errors for the user.
+* As a text-game writer, I want to add guidance for the player if they get lost.
+* As a text-game writer, I want to add tweeks such as slow-printed text and lines for aesthetic purposes.
 
 # Testing
 
@@ -48,19 +67,19 @@ The game was tested thoroughly for handling invalid user input and correct game 
 |---------------------|---------------------------------|---------------------------------|-------------|
 | Run the application | Show player greeting and intro  | Showed player greeting and intro| Pass        |
 | Answer questions    | Get follow-up question          | Got follow-up question          | Pass        |
-| Run game answer(n)  | Get restarted from 1st question | Restarted from 1st question     | Pass        |
+| Blank question      | Get different answer            | Got different answer            | Pass        |
+| Run game answer(n)  | Game over message and shut down | Game over message and shut down | Pass        |
 | Run game answer(y)  | Get instructions for game play  | Displayed game play instructions| Pass        |
+| Stay in tent        | Game over message and shut down | Game over message and shut down | Pass        |
 | Walk valid direction| Enter new environment           | Entered new environment         | Pass        |
 | Walk invalid dir.   | Get invalid direction message   | Got invalid direction message   | Pass        |
 | Walk invalid dir.   | Get valid direction suggestions | Got valid direction suggestions | Pass        |
-|                     |                                 |                                 |             |
-|                     |                                 |                                 |             |
-|                     |                                 |                                 |             |
-|                     |                                 |                                 |             |
+| Enter environment 15| Game over message and shut down | Game over message and shut down |             |
+
 
 ### Validator testing
 
-![Code Institute Python Linter](https://pep8ci.herokuapp.com/)
+[Code Institute Python Linter](https://pep8ci.herokuapp.com/)
 
 The code from this project has been tested in the CI Python Linter app to ensure it will comply with Pylint standards.
 - No errors
@@ -102,11 +121,13 @@ The version control was maintained using Git within GitPod to push code to the m
  * Scroll down to deploy: 
     * `Option 1` is selecting Automatic deploys (Will Update Automatically with every "git push"). This was chosen for this project.
 
- * Live deployment [Wilderness](https://.herokuapp.com/)
+ * Live deployment [Wilderness](https:/stugan2.herokuapp.com/)
 
 ## Credits
-- [Codeinstiute] (https://learn.codeinstitute.net/courses/course)
-- 
+- Code Institute (https://learn.codeinstitute.net/courses/course)
+- Inspiration for ReadMe content and structure taken from my fellow students at Code institute:
+  * Anwar Dawoud (https://github.com/AnwarDawoud/p3-geographyQ)
+  * Braxxian (https://github.com/Braxxian/Lost-in-the-woods)
 
 ## Acknowledgments
 
