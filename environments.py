@@ -1,16 +1,16 @@
 
-
 null = ''
-
-"""
-
-Controls for the game is n for north, s for south, e for east and
-finally - w for west. Numbers in dictionary is corrensponding to
-the environment which you are navigating to.
-
-"""
-
 env_list = [
+
+    """
+
+    All environments of this game are located here.
+    Controls for the game is n for north, s for south, e for east and
+    finally - w for west. Numbers in dictionary is corrensponding to
+    the environment which you are navigating to.
+
+    """
+
     {
         'number': 0,
         'name': 'The Tent',

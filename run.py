@@ -1,7 +1,12 @@
+
+
+# Import Python modules
 import sys
 import time
+# Import game environments
 from environments import env_list
 
+# Game variables
 player_name = 'player'
 game_question = ''
 text = ''
@@ -97,7 +102,7 @@ def navigate(env_number):
     slow_print(env_list[env_number]['scenario'])
     time.sleep(1)
 
-    if env_number == 15:
+    if env_number == 15:  # Game over screen
         slow_print('--------------------------------------------------')
         slow_print('Game over!')
         slow_print('--------------------------------------------------')
@@ -105,7 +110,7 @@ def navigate(env_number):
 
     valid_way = build_way(env_number)
 
-    while True:
+    while True:  # Error handling while-loop
         try:
             direction = input('')
             if direction not in valid_way:
