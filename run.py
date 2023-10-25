@@ -53,6 +53,9 @@ def intro():
 
     global game_question
     condition = str(input(f'How are you feeling today, {player_name}?\n'))
+    if condition == '':
+        slow_print('So, you are a quiet one.')
+        condition = 'the way you feel'
     condition_follow_up1 = str(input(f'I see, why do you think you are feeling'
                                      f' {condition}?\n'))
     condition_follow_up2 = str(input('Alright. . . Well, do you want to talk '
@@ -171,7 +174,7 @@ def game():
     """
     Main function to run the game
     """
-    
+
     slow_print(text)
     greet()
     get_player_name()
