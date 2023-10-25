@@ -74,7 +74,7 @@ The game was tested thoroughly for handling invalid user input and correct game 
 | Walk valid direction| Enter new environment           | Entered new environment         | Pass        |
 | Walk invalid dir.   | Get invalid direction message   | Got invalid direction message   | Pass        |
 | Walk invalid dir.   | Get valid direction suggestions | Got valid direction suggestions | Pass        |
-| Enter environment 15| Game over message and shut down | Game over message and shut down |             |
+| Enter environment 15| Game over message and shut down | Game over message and shut down | Pass        |
 
 
 ### Validator testing
@@ -83,9 +83,13 @@ The game was tested thoroughly for handling invalid user input and correct game 
 
 The code from this project has been tested in the CI Python Linter app to ensure it will comply with the Pylint standards.
 
-- No errors
+- No errors in run.py
 
 ![linter_run](/assets/Images/linter_run.png)
+
+- No errors in environments.py
+
+![linter_env](/assets/Images/linter_env.png)
 
 ## Technologies used
 
