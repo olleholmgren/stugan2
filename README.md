@@ -100,6 +100,15 @@ The code from this project has been tested in the CI Python Linter app to ensure
 - Github has been use to store the repository as well as version control with git
 - Heroku has been used to deploy the project
 
+## Bugs
+
+- No bugs in current state of the project
+
+## Future improvements
+
+- Implementing a working solution to the problem with ignoring and preventing the user to write input while program is printing text.
+  I have started on this function but never got it fully working.
+
 ## Deployment
 
 ### Version Control
