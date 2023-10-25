@@ -62,10 +62,14 @@ def intro():
                               f'{player_name}?\n'))
 
     if game_question == 'yes':
-        slow_print('ok, lets go!')
+        slow_print('Ok, lets go!')
     else:
-        slow_print('oh I see')
-        intro()
+        slow_print('Oh, I see. Well, I hope you get better soon.')
+        slow_print('Please come back another time. Bye for now!')
+        slow_print('--------------------------------------------------')
+        slow_print('Game over!')
+        slow_print('--------------------------------------------------')
+        sys.exit()
 
     time.sleep(1)
     print_lines()
@@ -196,7 +200,12 @@ def game():
     if game_question == 'yes':
         navigate(1)
     else:
-        slow_print('Ok, that is fine. You can stay in the tent')
+        slow_print('Ok, that is fine. You can stay in the tent.')
+        slow_print('I have to go now. Please come back another time!')
+        slow_print('--------------------------------------------------')
+        slow_print('Game over!')
+        slow_print('--------------------------------------------------')
+        sys.exit()
 
 
 if __name__ == '__main__':
